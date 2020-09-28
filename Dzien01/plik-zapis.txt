@@ -1,0 +1,4 @@
+To jest 1 linia pliku txt
+To jest 2 linia
+Kolejna linia 1
+Kolejna linia 2
