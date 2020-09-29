@@ -14,6 +14,29 @@ class Vector:
     def add_vector(self, other_vector):
         return Vector(self._x+other_vector._x, self._y+other_vector._y)
 
+    def get_x(self):
+        return self._x
+
+    def set_x(self, x):
+        self._x = x
+
+    def del_x(self):
+        del(self._x)
+
+    #X=property(get_x, set_x, del_x)
+
+    @property
+    def X(self):
+        return self._x
+
+    @X.setter
+    def X(self, value):
+        self._x = value
+
+    @X.deleter
+    def X(self):
+        del(self._x)
+
     def __add__(self, other_vector):
         if type(other_vector) is Vector:
             return Vector(self._x + other_vector._x, self._y + other_vector._y)
@@ -40,3 +63,8 @@ print(wektor1)
 print("suma=", wektor1.add_vector(wektor2))
 print("suma=", wektor1+ (3.0,-3.0) )
 print("roznica=", wektor1-wektor2)
+
+wektor1.X = 10
+print(wektor1.X)
+del(wektor1.X)
+#print(wektor1.X)
