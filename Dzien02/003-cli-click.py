@@ -8,7 +8,6 @@ import click
 @click.option('--range', nargs=2, type=(int, int), default=[None]*2) #2 argumenty
 @click.option('--verbose', '-v', count=True) # -v -vv -vvvv
 @click.option('--units',  type=click.Choice(['IMPERIAL', 'METRIC'], case_sensitive=False), default='METRIC')
-
 def main(location, apikey, humidity, units, numbers, range, verbose ):
     """
     This is text displayed after --help option
