@@ -1,6 +1,7 @@
 import time
+import functools
 
-
+@functools.lru_cache(128)
 def fibo_rek(n):
     if n<=1:
         return n
