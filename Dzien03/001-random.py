@@ -54,4 +54,5 @@ print(h.hexdigest())
 
 gaus_data = [random.gauss(10, 2) for _ in range(50_000)]
 plt.hist(gaus_data, bins=30)
-plt.show()
+#plt.show()
+plt.savefig("wykres.jpg", quality=100, dpi=300)
